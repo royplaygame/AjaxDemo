@@ -13,8 +13,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import org.apache.tomcat.util.codec.binary.StringUtils;
-
 import com.alibaba.fastjson.JSON;
 
 @WebServlet("/userServlet")
