@@ -40,6 +40,21 @@ public class UserServlet extends HttpServlet {
 
 	}
 
+	protected void toList(HttpServletRequest request, HttpServletResponse response) throws IOException {
+		Plan_list p1 = new Plan_list("1", "1000", "1000", "已回笼");
+		Plan_list p2 = new Plan_list("2", "1000", "800", "部分回笼");
+		Plan_list p3 = new Plan_list("3", "1000", "0", "未回笼");
+		Plan_list p4 = new Plan_list("4", "1000", "0", "未回笼");
+		List<Plan_list> list = new ArrayList<>();
+		list.add(p1);
+		list.add(p2);
+		list.add(p3);
+		list.add(p4);
+
+		System.out.println(JSON.toJSONString(list));
+		response.getWriter().print(JSON.toJSONString(list));
+	}
+
 	protected void getCity(HttpServletRequest request, HttpServletResponse response) throws IOException {
 		String city = request.getParameter("city");
 		List<String> china = new ArrayList<>();
