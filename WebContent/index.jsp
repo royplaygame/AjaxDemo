@@ -81,7 +81,7 @@
 		<h2><a href="serialize.jsp">serialize......</a></h2>
 		<h2><a href="ajax.jsp">ajax原生写法......</a></h2>
 		<h2><a href="ajax2.jsp">ajax2联动写法......</a></h2>
-		<h2><a href="toList.jsp">toList......</a></h2>
+		<h2><a href="toTableList.jsp">toList......</a></h2>
 	</center>
 </body>
 </html>
