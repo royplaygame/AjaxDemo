@@ -22,23 +22,23 @@
 					displayTable.innerHTML = null;
 					for (var i = 0; i < obj.length; i++) {
 						var tr = document.createElement("tr");
-						
+
 						var td = document.createElement("td");
-						td.innerHTML=obj[i].plan_list;
+						td.innerHTML = obj[i].plan_list;
 						tr.appendChild(td);
-						
+
 						var td = document.createElement("td");
-						td.innerHTML=obj[i].rent;
+						td.innerHTML = obj[i].rent;
 						tr.appendChild(td);
-						
+
 						var td = document.createElement("td");
-						td.innerHTML=obj[i].fact_rent;
+						td.innerHTML = obj[i].fact_rent;
 						tr.appendChild(td);
-						
+
 						var td = document.createElement("td");
-						td.innerHTML=obj[i].status;
+						td.innerHTML = obj[i].status;
 						tr.appendChild(td);
-						
+
 						displayTable.appendChild(tr);
 					}
 				}
@@ -59,6 +59,7 @@
 				<td>status</td>
 			</tr>
 			<tbody id="stock">
+
 			</tbody>
 		</table>
 	</center>
