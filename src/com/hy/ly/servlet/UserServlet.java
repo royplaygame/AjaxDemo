@@ -22,6 +22,7 @@ public class UserServlet extends HttpServlet {
 	protected void service(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		response.setCharacterEncoding("UTF-8");
+		response.setContentType("text/html;charset=utf-8");
 		String type = request.getParameter("type");
 		try {
 			Method method = UserServlet.class.getDeclaredMethod(type, HttpServletRequest.class,
@@ -34,6 +35,33 @@ public class UserServlet extends HttpServlet {
 
 	protected void userLogin(HttpServletRequest request, HttpServletResponse response) {
 
+	}
+
+	protected void getUserName(HttpServletRequest request, HttpServletResponse response) throws IOException {
+		String[] names = { "张军伟", "郭战勇", "胡天顺", "杜增博", "吕洋洋", "张园凯", "元嘉铭", "任恣恒", "谭小其", "张硕", "任帅强", "郭星星", "苗丽萍",
+				"张恩惠", "姚程程", "李振昆", "史雪茹", "田孝赟", "张清威", "胡艳升", "孔金鑫", "涂文俊", "王稳", "孙一博", "罗子豪", "王珂珂", "董传杰", "赵云飞",
+				"靳涛", "张俊杰", "张成" };
+
+		int rand = (int) Math.floor(Math.random() * 31);
+		response.getWriter().print(names[rand]);
+	}
+
+	protected void tips(HttpServletRequest request, HttpServletResponse response) throws IOException {
+		String word=request.getParameter("ch");
+		List<String> list = new ArrayList<>();
+		List<String> rtList = new ArrayList<>();
+		list.add("abc");
+		list.add("abord");
+		list.add("book");
+		list.add("bord");
+		list.add("clerk");
+		list.add("cook");
+		for(String s:list) {
+			if(s.indexOf(word)!=-1) {
+				rtList.add(s);
+			}
+		}
+		response.getWriter().println(rtList);
 	}
 
 	protected void register(HttpServletRequest request, HttpServletResponse response) {

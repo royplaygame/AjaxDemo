@@ -46,7 +46,7 @@
 			var url = "userServlet?type=getCity&city=" + id;
 			//设置响应的回调函数
 			xmlrequest.onreadystatechange = proResponse;
-			//打开与服务器响应地址的连接
+			//打开服务器响应地址的连接
 			xmlrequest.open("get", url, true);
 			//发送请求
 			xmlrequest.send(null);
